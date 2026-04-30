@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/Preview.tsx","./src/components/RangeSlider.tsx","./src/components/Recorder.tsx","./src/hooks/useScreenCapture.ts","./src/utils/gifEncoder.ts"],"version":"5.9.3"}

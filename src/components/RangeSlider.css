@@ -1,0 +1,73 @@
+.range-slider {
+  width: 100%;
+  padding: 12px 0 8px;
+  user-select: none;
+}
+
+.range-track {
+  position: relative;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.range-track-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.range-handle {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  transition: transform 0.1s;
+}
+
+.range-handle:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.range-handle .handle-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  border: 1px solid var(--border);
+}
+
+.range-handle:hover .handle-tooltip,
+.range-handle:active .handle-tooltip {
+  opacity: 1;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}

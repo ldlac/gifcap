@@ -1,0 +1,223 @@
+.preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: var(--shadow);
+}
+
+.preview-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.encoding-progress {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.encoding-progress p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.trim-controls h3,
+.crop-controls h3 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trim-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slider-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.slider-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.frame-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.crop-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crop-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: var(--surface-hover);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn-success {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-success:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.canvas-inner {
+  position: relative;
+  display: inline-block;
+}
+
+.crop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: crosshair;
+}
+
+.crop-rect {
+  position: absolute;
+  border: 2px solid var(--primary);
+  background: rgba(108, 92, 231, 0.15);
+  box-sizing: border-box;
+}
+
+.crop-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.crop-handle.top-left { top: -5px; left: -5px; cursor: nw-resize; }
+.crop-handle.top-right { top: -5px; right: -5px; cursor: ne-resize; }
+.crop-handle.bottom-left { bottom: -5px; left: -5px; cursor: sw-resize; }
+.crop-handle.bottom-right { bottom: -5px; right: -5px; cursor: se-resize; }
+
+.crop-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.clear-crop {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 6px;
+  padding: 0 4px;
+}
+
+.btn-secondary.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}

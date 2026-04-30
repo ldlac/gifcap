@@ -1,0 +1,158 @@
+.recorder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.recorder-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--shadow);
+}
+
+.icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.recorder-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.recorder-card p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.setting {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.setting label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.fps-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.fps-selector button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.fps-selector button:hover {
+  border-color: var(--primary);
+}
+
+.fps-selector button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  width: 100%;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.recording-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--danger);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.timer {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  font-size: 0.85rem !important;
+  margin-bottom: 8px !important;
+}
+
+.error {
+  background: rgba(231, 76, 60, 0.15);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
