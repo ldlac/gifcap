@@ -1,6 +1,6 @@
 # GifCap React
 
-A client-side screen recording to GIF converter built with React, TypeScript, and Vite. Inspired by [gifcap.dev](https://gifcap.dev).
+A client-side screen recording to GIF converter built with React, TypeScript, and Vite.
 
 ## Features
 
@@ -84,6 +84,7 @@ src/
 ## Browser Support
 
 Requires a modern browser with support for:
+
 - `getDisplayMedia` (Screen Capture API)
 - Canvas API
 - Web Workers
